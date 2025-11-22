@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E2E2E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UTCalculator"
+        android:textColor="#CCCCCC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textSize="80sp"
+        android:textColor="@android:color/white"
+        android:gravity="end"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName"
+        app:layout_constraintBottom_toTopOf="@id/gridLayout"
+        app:layout_constraintVertical_bias="1.0"/> <GridLayout
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp" android:columnCount="4"
+    android:rowCount="5"
+    android:padding="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvResult"
+    >
+
+    <Button style="@style/CalculatorButton.Operation" android:text="AC" android:id="@+id/btnAC" />
+    <Button style="@style/CalculatorButton.Operation" android:text="+/-" android:id="@+id/btnPlusMinus" />
+    <Button style="@style/CalculatorButton.Operation" android:text="%" android:id="@+id/btnPercent" />
+    <Button style="@style/CalculatorButton.Operator" android:text="/" android:id="@+id/btnDivide" />
+
+    <Button style="@style/CalculatorButton.Number" android:text="7" android:id="@+id/btn7" />
+    <Button style="@style/CalculatorButton.Number" android:text="8" android:id="@+id/btn8" />
+    <Button style="@style/CalculatorButton.Number" android:text="9" android:id="@+id/btn9" />
+    <Button style="@style/CalculatorButton.Operator" android:text="*" android:id="@+id/btnMultiply" />
+
+    <Button style="@style/CalculatorButton.Number" android:text="4" android:id="@+id/btn4" />
+    <Button style="@style/CalculatorButton.Number" android:text="5" android:id="@+id/btn5" />
+    <Button style="@style/CalculatorButton.Number" android:text="6" android:id="@+id/btn6" />
+    <Button style="@style/CalculatorButton.Operator" android:text="-" android:id="@+id/btnSubtract" />
+
+    <Button style="@style/CalculatorButton.Number" android:text="1" android:id="@+id/btn1" />
+    <Button style="@style/CalculatorButton.Number" android:text="2" android:id="@+id/btn2" />
+    <Button style="@style/CalculatorButton.Number" android:text="3" android:id="@+id/btn3" />
+    <Button style="@style/CalculatorButton.Operator" android:text="+" android:id="@+id/btnAdd" />
+
+    <Button
+        style="@style/CalculatorButton.Number.Large"
+        android:text="0"
+        android:id="@+id/btn0" />
+    <Button style="@style/CalculatorButton.Number" android:text="." android:id="@+id/btnDecimal" />
+    <Button style="@style/CalculatorButton.Operator" android:text="=" android:id="@+id/btnEquals" />
+</GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
